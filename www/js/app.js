@@ -1,4 +1,4 @@
-angular.module('todo-list', ['ionic', 'LocalStorageModule', 'todo-list.controllers'])
+angular.module('todo-list', ['ionic', 'LocalStorageModule', 'todo-list.controllers', 'todo-list.directives'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,6 +23,5 @@ angular.module('todo-list', ['ionic', 'LocalStorageModule', 'todo-list.controlle
     .setPrefix('todo-list');
 });
 
-
-
 angular.module('todo-list.controllers', []);
+angular.module('todo-list.directives', []);
