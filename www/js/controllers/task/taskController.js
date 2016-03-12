@@ -1,5 +1,6 @@
 angular.module('todo-list.controllers')
   .controller('TaskController', ['$scope', '$ionicModal', 'localStorageService', function($scope, $ionicModal, localStorageService) {
+    var taskData = 'task';
     $scope.task = {};
     $scope.tasks = [];
 
@@ -10,6 +11,14 @@ angular.module('todo-list.controllers')
     }).then(function(modal) {
       $scope.newTaskModal = modal;
     });
+
+    $scope.openTaskModal = function() {
+      $scope.newTaskModal.show();
+    };
+
+    $scope.closeTaskModal = function() {
+      $scope.newTaskModal.hide();
+    };
 
     $scope.getTasks = function() {
       if (localStorageService.get(taskData)) {
