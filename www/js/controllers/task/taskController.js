@@ -5,7 +5,7 @@ angular.module('todo-list.controllers')
     $scope.tasks = [];
 
     //configure the ionic modal before use
-    $ionicModal.fromTemplateUrl('new-task-modal.html', {
+    $ionicModal.fromTemplateUrl('templates/task/_newTask.html', {
       scope: $scope,
       animation: 'slide-in-up'
     }).then(function(modal) {
